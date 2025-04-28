@@ -1,16 +1,24 @@
-# Node.js dependencies
+# Node.js
 node_modules/
+dist/
+.env
 
 # Logs
+logs/
 *.log
 
-# IDE / Editor folders
-.vscode/
-.idea/
+# Docker
+docker-compose.override.yml
+*.pid
 
-# Docker-related
-.docker/
-
-# OS-specific files
+# Systemdateien
 .DS_Store
 Thumbs.db
+
+# IDEs und Editoren
+.vscode/
+.idea/
+*.swp
+
+# Build-Outputs
+build/
