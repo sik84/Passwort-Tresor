@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# IDE / Editor folders
+.vscode/
+.idea/
+
+# Docker-related
+.docker/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
