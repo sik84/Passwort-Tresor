@@ -5,7 +5,7 @@ import { connectDB } from '../config/db.js';
 const app = Fastify({ logger: true });
 
 connectDB(app);
-routes(app);
+app.register(routes);
 
 app.listen({ port: 4000, host: '0.0.0.0' }, (err, address) => {
   if (err) {
