@@ -1,6 +1,6 @@
-import Fastify from 'fastify';
-import routes from './routes/index.js';
-import { connectDB } from '../config/db.js';
+const Fastify = require('fastify');
+const routes = require('./routes/index.js');
+const { connectDB } = require('../config/db.js');
 
 const app = Fastify({ logger: true });
 

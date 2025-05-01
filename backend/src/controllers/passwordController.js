@@ -1,20 +1,21 @@
-import { getPasswords, addPassword } from '../modules/passwordModel.js';
-
-export const getAllPasswords = async (request, reply) => {
+// src/controllers/passwordController.js
+const getAllPasswords = async (request, reply) => {
   try {
-    const data = await getPasswords();
+    const data = await getPasswords(); // Beispiel für eine getPasswords() Funktion
     reply.send(data);
   } catch (err) {
-    reply.status(500).send({ error: 'Fehler beim Abrufen der Passwörter.' });
+    reply.status(500).send({ error: err.message });
   }
 };
 
-export const createPassword = async (request, reply) => {
+const createPassword = async (request, reply) => {
   try {
-    const { title, password } = request.body;
-    const result = await addPassword(title, password);
-    reply.code(201).send(result);
+    const { password } = request.body;
+    await savePassword(password); // Beispiel für eine savePassword() Funktion
+    reply.status(201).send({ message: 'Password created' });
   } catch (err) {
-    reply.status(500).send({ error: 'Fehler beim Speichern des Passworts.' });
+    reply.status(500).send({ error: err.message });
   }
 };
+
+module.exports = { getAllPasswords, createPassword }; // Exporte mit module.exports
