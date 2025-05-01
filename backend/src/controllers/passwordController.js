@@ -1,4 +1,6 @@
 // src/controllers/passwordController.js
+const { getPasswords, addPassword } = require('../modules/passwordModel.js');
+
 const getAllPasswords = async (request, reply) => {
   try {
     const data = await getPasswords(); // Beispiel für eine getPasswords() Funktion
@@ -10,9 +12,9 @@ const getAllPasswords = async (request, reply) => {
 
 const createPassword = async (request, reply) => {
   try {
-    const { password } = request.body;
-    await savePassword(password); // Beispiel für eine savePassword() Funktion
-    reply.status(201).send({ message: 'Password created' });
+    const { title, password } = request.body;
+    const saved = await addPassword(title, password); // Beispiel für eine savePassword() Funktion
+    reply.status(201).send(saved);
   } catch (err) {
     reply.status(500).send({ error: err.message });
   }

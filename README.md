@@ -87,3 +87,40 @@ Docker:
 Docker Compose-Datei erstellt, um die Backend- und Frontend-Container zu verwalten.
 Dockerfiles für Backend und Frontend angelegt.
 Verbindungen zwischen den Containern konfiguriert.
+
+30.04.2025: 
+
+Backend-Grundstruktur fertig erstellt, Dockerfile für Back- und Frontend erstellt sowie Einrichtung der docker-compose.yml mit PostgreSQL
+
+01.05.2025:
+
+#### ✅ Backend
+
+- Setup von Jest für Unit-Tests
+
+- Erstellung eines einfachen API-Tests (/health)
+
+- Behebung von Problemen mit import/export durch Umstellung auf CommonJS
+
+- Tests erfolgreich ausgeführt (npm test)
+
+- Korrektur und Erweiterung des passwordController.js zur Verarbeitung von title & password
+
+- Anbindung an PostgreSQL via addPassword() & getPasswords() aus passwordModel.js
+
+#### ✅ Frontend
+
+- API-Integration umgesetzt (getPasswords, createPassword)
+
+- Nutzung von useEffect und Formular-Handling (onSubmit)
+
+- Erste Verbindung zum Backend (GET, POST)
+
+- UI-Erweiterung um ein title-Feld im Formular
+
+- Anbindung des erweiterten Formulars an die API
+
+#### 🛠️ Sonstiges
+
+- Erste POST-Verbindung scheiterte (Connection Refused), Ursache: Container nicht aktiv
+- Docker-Container-Tests und Service-Start werden am Folgetag durchgeführt
