@@ -124,3 +124,23 @@ Backend-Grundstruktur fertig erstellt, Dockerfile für Back- und Frontend erstel
 
 - Erste POST-Verbindung scheiterte (Connection Refused), Ursache: Container nicht aktiv
 - Docker-Container-Tests und Service-Start werden am Folgetag durchgeführt
+
+02.05.2025:
+
+1. API-Endpunkte für Passwörter
+GET /passwords: Gibt eine Liste aller gespeicherten Passwörter zurück.
+
+POST /passwords: Ermöglicht das Hinzufügen eines neuen Passworts. Heute erfolgreich getestet.
+
+2. API-Endpunkte für Benutzerauthentifizierung
+POST /register: Erlaubt es einem neuen Benutzer, sich zu registrieren.
+
+POST /login: Ermöglicht es einem Benutzer, sich anzumelden und ein JWT zu erhalten.
+
+### Benutzer-Authentifizierung
+
+- Die Benutzer-Authentifizierung wurde vorbereitet Die nötigen Endpunkte für die Registrierung und den Login wurden erstellt. 
+
+### Container-Verbindung
+
+- Die Container-Verbindung war erfolgreich. Alle separaten Container für Front-, Backend und Datenbank konnten miteinander kommunizieren.
