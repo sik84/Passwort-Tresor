@@ -1,25 +1,24 @@
 // frontend/api.js
+import axios from 'axios';
 
-const API_URL = 'http://localhost:4000';  // Backend URL, anpassen je nach Setup
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 
 export async function getPasswords() {
-  const response = await fetch(`${API_URL}/passwords`);
-  if (!response.ok) {
-    throw new Error('Fehler beim Abrufen der Passwörter');
+  try {
+    const response = await axios.get(`${API_URL}/passwords`);
+    return response.data;
+  } catch (error) {
+    console.error('Fehler beim Abrufen der Passwörter:', error);
+    throw error;
   }
-  return await response.json();
 }
 
 export async function createPassword(passwordData) {
-  const response = await fetch(`${API_URL}/passwords`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(passwordData),
-  });
-  if (!response.ok) {
-    throw new Error('Fehler beim Hinzufügen des Passworts');
+  try {
+    const response = await axios.post(`${API_URL}/passwords`, passwordData);
+    return response.data;
+  } catch (error) {
+    console.error('Fehler beim Hinzufügen des Passworts:', error);
+    throw error;
   }
-  return await response.json();
 }

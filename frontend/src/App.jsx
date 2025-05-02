@@ -1,66 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import { getPasswords, createPassword } from '../api'; // API-Client importieren
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-function App() {
+export default function PasswordManager() {
+  const [title, setTitle] = useState('');
+  const [password, setPassword] = useState('');
   const [passwords, setPasswords] = useState([]);
-  const [newPassword, setNewPassword] = useState('');
-  const [newTitle, setNewTitle] = useState(''); // <-- NEU
 
-  useEffect(() => {
-    async function fetchPasswords() {
-      try {
-        const data = await getPasswords();
-        setPasswords(data);
-      } catch (error) {
-        console.error('Error fetching passwords:', error);
-      }
-    }
-    fetchPasswords();
-  }, []);
+  const fetchPasswords = async () => {
+    const res = await axios.get('http://localhost:4000/passwords');
+    setPasswords(res.data);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!newPassword || !newTitle) return;
-
-    try {
-      const data = await createPassword({ title: newTitle, password: newPassword });
-      setPasswords((prev) => [...prev, data]);
-      setNewPassword('');
-      setNewTitle('');
-    } catch (error) {
-      console.error('Error creating password:', error);
-    }
+    await axios.post('http://localhost:4000/passwords', { title, password });
+    setTitle('');
+    setPassword('');
+    fetchPasswords();
   };
+
+  useEffect(() => {
+    fetchPasswords();
+  }, []);
 
   return (
     <div>
-      <h1>Passwort-Tresor</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          value={newTitle}
-          onChange={(e) => setNewTitle(e.target.value)}
           placeholder="Titel"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <input
           type="text"
-          value={newPassword}
-          onChange={(e) => setNewPassword(e.target.value)}
-          placeholder="Neues Passwort"
+          placeholder="Passwort"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Hinzufügen</button>
+        <button type="submit">Speichern</button>
       </form>
 
-      <h2>Passwörter</h2>
+      <h2>Gespeicherte Passwörter</h2>
       <ul>
-        {passwords.map((password, index) => (
-          <li key={index}>
-            <strong>{password.title}:</strong> {password.password}
+        {passwords.map((pw) => (
+          <li key={pw.id}>
+            <strong>{pw.title}:</strong> {pw.password}
           </li>
         ))}
       </ul>
     </div>
   );
 }
-
-export default App;
