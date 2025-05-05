@@ -144,3 +144,37 @@ POST /login: Ermöglicht es einem Benutzer, sich anzumelden und ein JWT zu erhal
 ### Container-Verbindung
 
 - Die Container-Verbindung war erfolgreich. Alle separaten Container für Front-, Backend und Datenbank konnten miteinander kommunizieren.
+
+📅 Fortschritt – 05.05.2025
+
+## Backend (Fastify + PostgreSQL)
+
+Fastify-Server erfolgreich eingerichtet (inkl. Logging & CORS)
+
+Authentifizierungs-Endpunkte: /auth/register & /auth/login
+
+JWT-basierte Authentifizierung mit Middleware verifyToken
+
+Geschützte Passwort-Routen unter /passwords verfügbar
+
+PostgreSQL-Anbindung über db.js hergestellt
+
+Health-Check unter / implementiert
+
+## Frontend (React + Vite)
+Projekt mit Vite angelegt und React konfiguriert
+
+LoginForm.jsx: Benutzer-Login mit Token-Speicherung im LocalStorage
+
+PasswordForm.jsx: Eingabeformular zur Passwortverwaltung
+
+Authentifizierte Requests ans Backend funktionieren
+
+Erste API-Tests erfolgreich in Postman durchgeführt
+
+## Debugging & Struktur
+Alle Import-/Export-Probleme in ESM-Modulen behoben
+
+Routen-Fehler (404) identifiziert & behoben
+
+Initiale Datenbankfehler erkannt: Tabelle users fehlt noch (wird später angelegt)
