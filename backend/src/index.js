@@ -1,8 +1,8 @@
-const Fastify = require('fastify');
-const cors = require('@fastify/cors');
-const authRoutes = require('./routes/auth.js');
-const passwordRoutes = require('./routes/password.js');
-require('../config/db.js'); // Verbindung initialisieren
+import Fastify from 'fastify';
+import cors from '@fastify/cors';
+import authRoutes from './routes/auth.js';
+import passwordRoutes from './routes/password.js';
+import '../config/db.js'; // Verbindung initialisieren
 
 const app = Fastify({ logger: true });
 
@@ -20,3 +20,8 @@ app.listen({ port: 4000, host: '0.0.0.0' }, (err, address) => {
   }
   app.log.info(`🚀 Server läuft unter ${address}`);
 });
+
+app.get('/', async (request, reply) => {
+  return { status: 'API läuft 🎉' };
+});
+

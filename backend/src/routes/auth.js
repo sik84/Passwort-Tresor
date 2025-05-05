@@ -1,6 +1,7 @@
-const { registerUser, loginUser } = require('../controllers/authController.js');
+// auth.js
+import { registerUser, loginUser } from '../controllers/authController.js';
 
-module.exports = async function (fastify, options) {
-  fastify.post('/register', registerUser);
-  fastify.post('/login', loginUser);
-};
+export default async function (fastify, options) {
+  fastify.post('/auth/register', registerUser);
+  fastify.post('/auth/login', loginUser);
+}

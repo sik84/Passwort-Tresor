@@ -1,54 +1,27 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+// src/App.jsx
+import React, { useState } from 'react';
+import LoginForm from './components/LoginForm';
+import PasswordForm from './components/PasswordForm';
 
-export default function PasswordManager() {
-  const [title, setTitle] = useState('');
-  const [password, setPassword] = useState('');
-  const [passwords, setPasswords] = useState([]);
+function App() {
+  const [token, setToken] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const fetchPasswords = async () => {
-    const res = await axios.get('http://localhost:4000/passwords');
-    setPasswords(res.data);
+  const handleLogin = (token) => {
+    setToken(token);
+    setIsLoggedIn(true);
   };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await axios.post('http://localhost:4000/passwords', { title, password });
-    setTitle('');
-    setPassword('');
-    fetchPasswords();
-  };
-
-  useEffect(() => {
-    fetchPasswords();
-  }, []);
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Titel"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Passwort"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Speichern</button>
-      </form>
-
-      <h2>Gespeicherte Passwörter</h2>
-      <ul>
-        {passwords.map((pw) => (
-          <li key={pw.id}>
-            <strong>{pw.title}:</strong> {pw.password}
-          </li>
-        ))}
-      </ul>
+    <div className="App">
+      <h1>Passwort-Tresor</h1>
+      {!isLoggedIn ? (
+        <LoginForm onLogin={handleLogin} />
+      ) : (
+        <PasswordForm token={token} />
+      )}
     </div>
   );
 }
+
+export default App;

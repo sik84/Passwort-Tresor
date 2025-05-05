@@ -1,5 +1,5 @@
 # Passwort-Tresor
-Projekt zum sicheren Speichern von P
+Projekt zum sicheren Speichern von Passwörtern
 # 🔐 Passwort-Tresor (Abschlussprojekt)
 
 ## 📌 Projektbeschreibung

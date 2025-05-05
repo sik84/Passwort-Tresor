@@ -1,11 +1,13 @@
-const { getAllPasswords, createPassword } = require('../controllers/passwordController.js');
+import { getAllPasswords, createPassword } from '../controllers/passwordController.js';
+import verifyToken from '../middleware/verifyToken.js';
 
-module.exports = async function (fastify, options) {
-  fastify.get('/passwords', getAllPasswords);
-  fastify.post('/passwords', createPassword);
+export default async function (fastify, options) {
+  // geschützte Routen:
+  fastify.get('/passwords', { preHandler: verifyToken }, getAllPasswords);
+  fastify.post('/passwords', { preHandler: verifyToken }, createPassword);
 
-// Neue Health-Check-Route
-fastify.get('/health', async (request, reply) => {
-  return { status: 'OK' };
-});
+  fastify.get('/health', async (request, reply) => {
+    return { status: 'OK' };
+  });
 }
+
