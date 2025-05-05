@@ -5,7 +5,7 @@ import pool from '../../config/db.js';
 // Neuen Benutzer erstellen
 export async function createUser(username, passwordHash) {
   const result = await pool.query(
-    'INSERT INTO users (username, password_hash) VALUES ($1, $2) RETURNING id, username, created_at',
+    'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id, username, created_at',
     [username, passwordHash]
   );
   return result.rows[0];

@@ -172,9 +172,22 @@ Authentifizierte Requests ans Backend funktionieren
 
 Erste API-Tests erfolgreich in Postman durchgeführt
 
+### Datenbank:
+
+- **Tabelle `users`**:
+   - Spalten: `id`, `username`, `password`.
+   - Die Benutzer werden mit einem gehashten Passwort gespeichert.
+   - Ein Beispielbenutzer wurde zum Testen hinzugefügt.
+
+- **Tabelle `passwords`**:
+   - Spalten: `id`, `title`, `password`, `created_at`.
+   - Passwörter werden mit einem Titel und einem sicheren Hash gespeichert.
+
 ## Debugging & Struktur
 Alle Import-/Export-Probleme in ESM-Modulen behoben
 
 Routen-Fehler (404) identifiziert & behoben
 
 Initiale Datenbankfehler erkannt: Tabelle users fehlt noch (wird später angelegt)
+
+Tabelle users wird zwar erstellt, dennoch gibt es Fehler beim Benutzerlogin
