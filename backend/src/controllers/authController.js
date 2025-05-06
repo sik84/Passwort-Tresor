@@ -6,12 +6,19 @@ import { findUserByUsername, createUser } from '../modules/userModel.js'; // Kor
 export async function registerUser(request, reply) {
   try {
     const { username, password } = request.body;
+
+    console.log('Eingegebener Benutzername:', username);
+    console.log('Eingegebenes Passwort:', password);
     
     // Überprüfen, ob der Benutzer bereits existiert
     const existingUser = await findUserByUsername(username);
+    console.log('Gefundener Benutzer:', user);
+
     if (existingUser) {
       return reply.status(400).send({ message: 'User already exists' });
     }
+
+    console.log('Vergleich mit Passwort-Hash:', user.password_hash);
 
     // Passwort hashen
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -38,7 +45,9 @@ export async function loginUser(request, reply) {
     }
 
     // Passwort überprüfen
-    const validPassword = await bcrypt.compare(password, user.password);
+    const validPassword = await bcrypt.compare(password, user.password_hash);
+    console.log('✅ Passwort gültig?', validPassword);
+    
     if (!validPassword) {
       return reply.status(401).send({ message: 'Invalid password' });
     }
@@ -53,6 +62,7 @@ export async function loginUser(request, reply) {
     // Erfolgreiches Login
     return reply.status(200).send({ message: 'Login successful', token });
   } catch (err) {
+    console.error('❌ Fehler beim Login:', err);  // <- Hier wichtig!
     reply.status(500).send({ message: 'Server error during login', error: err.message });
   }
 }

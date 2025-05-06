@@ -1,12 +1,13 @@
 // src/components/LoginForm.jsx
 import { useState } from 'react';
 
-export default function LoginForm({ onLoginSuccess }) {
+export default function LoginForm({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
 
   const handleLogin = async (e) => {
+    console.log("🎯 handleLogin triggered", { username, password });
     e.preventDefault();
     setError(null);
 
@@ -23,7 +24,7 @@ export default function LoginForm({ onLoginSuccess }) {
 
       if (response.ok) {
         localStorage.setItem('token', data.token);
-        onLoginSuccess();
+        onLogin();
       } else {
         setError(data.message || 'Login failed');
       }

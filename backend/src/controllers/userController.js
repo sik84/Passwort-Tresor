@@ -19,7 +19,7 @@ export async function registerUser(request, reply) {
       return reply.status(409).send({ error: 'Benutzername bereits vergeben.' });
     }
 
-    const passwordHash = await bcrypt.hash(password, 10);
+    const passwordHash = await bcrypt.hash(password_hash, 10);
     const user = await createUser(username, passwordHash);
 
     reply.status(201).send({ message: 'Benutzer erfolgreich registriert.', user });

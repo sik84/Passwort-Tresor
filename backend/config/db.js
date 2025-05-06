@@ -5,9 +5,9 @@ const { Pool } = pg;
 const pool = new Pool({
   host: process.env.DB_HOST || 'localhost',
   port: process.env.DB_PORT || 5432,
-  user: process.env.DB_USER || 'postgres',
-  password: process.env.DB_PASSWORD || 'postgres',
-  database: process.env.DB_NAME || 'password_tresor',
+  user: process.env.DB_USER || 'passtresor_user',
+  password: process.env.DB_PASSWORD || 'deinPasswort',
+  database: process.env.DB_NAME || 'passtresor',
 });
 
 pool.on('connect', () => {
