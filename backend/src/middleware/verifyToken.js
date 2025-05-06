@@ -1,8 +1,12 @@
+import dotenv from 'dotenv';
+dotenv.config(); // .env laden
+import jwt from 'jsonwebtoken';
+
 export default function verifyToken(request, reply, done) {
   const authHeader = request.headers.authorization;
-  console.log("Authorization Header:", authHeader);
+  console.log("Authorization Header:", authHeader); // Logge den Header für Debugging
 
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+  if (!authHeader || !authHeader.startsWith('Bearer')) {
     reply.code(401).send({ message: 'Token fehlt oder ungültig' });
     return;
   }
@@ -10,7 +14,7 @@ export default function verifyToken(request, reply, done) {
   const token = authHeader.split(' ')[1];
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'supersecret');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'my_super_secret_key_4567');
     request.user = decoded;
     done();
   } catch (err) {

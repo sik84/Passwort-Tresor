@@ -7,7 +7,10 @@ function App() {
   const [token, setToken] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+
   const handleLogin = (token) => {
+    console.log('✅ Login token:', token); // Hier loggen wir den Token
+    localStorage.setItem('token', token);  // Speichern im localStorage
     setToken(token);
     setIsLoggedIn(true);
   };

@@ -5,10 +5,10 @@ export async function getPasswords() {
   return result.rows;
 }
 
-export async function addPassword(title, password) {
+export async function addPassword(title, encryptedPassword) {
   const result = await pool.query(
-    'INSERT INTO passwords (title, password) VALUES ($1, $2) RETURNING *',
-    [title, password]
+    'INSERT INTO passwords (title, password_hash) VALUES ($1, $2) RETURNING *',
+    [title, encryptedPassword]
   );
   return result.rows[0];
 }

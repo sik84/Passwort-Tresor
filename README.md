@@ -92,6 +92,8 @@ Verbindungen zwischen den Containern konfiguriert.
 
 Backend-Grundstruktur fertig erstellt, Dockerfile für Back- und Frontend erstellt sowie Einrichtung der docker-compose.yml mit PostgreSQL
 
+---
+
 01.05.2025:
 
 #### ✅ Backend
@@ -125,6 +127,8 @@ Backend-Grundstruktur fertig erstellt, Dockerfile für Back- und Frontend erstel
 - Erste POST-Verbindung scheiterte (Connection Refused), Ursache: Container nicht aktiv
 - Docker-Container-Tests und Service-Start werden am Folgetag durchgeführt
 
+---
+
 02.05.2025:
 
 1. API-Endpunkte für Passwörter
@@ -144,6 +148,8 @@ POST /login: Ermöglicht es einem Benutzer, sich anzumelden und ein JWT zu erhal
 ### Container-Verbindung
 
 - Die Container-Verbindung war erfolgreich. Alle separaten Container für Front-, Backend und Datenbank konnten miteinander kommunizieren.
+
+---
 
 📅 Fortschritt – 05.05.2025
 
@@ -191,3 +197,44 @@ Routen-Fehler (404) identifiziert & behoben
 Initiale Datenbankfehler erkannt: Tabelle users fehlt noch (wird später angelegt)
 
 Tabelle users wird zwar erstellt, dennoch gibt es Fehler beim Benutzerlogin
+
+---
+
+06.05.2025:
+
+## ✅ Implementierte Funktionen (Stand: [heutiges Datum])
+
+- [x] Benutzer-Login mit JWT-Token (Fastify + jsonwebtoken)
+- [x] Sicheres Speichern von Passwörtern in PostgreSQL
+- [x] Frontend-Formular zur Passwort-Eingabe
+- [x] Token-Speicherung im localStorage (persistente Auth)
+- [x] Middleware zum Schutz von Routen (`verifyToken`)
+- [x] `.env`-Verwaltung für Secrets (z. B. `JWT_SECRET`)
+- [x] Anzeige von Erfolgs-/Fehlermeldungen im UI
+- [x] Logging zur Fehleranalyse im Frontend & Backend
+- [x] encryption.js im Ordner utils angelegt
+
+
+## 🔧 Tech Stack
+
+- **Frontend:** React (Vite)
+- **Backend:** Fastify (Node.js)
+- **Datenbank:** PostgreSQL
+- **Security:** bcrypt, JWT (json-web-token)
+
+## 📦 Datenbankstruktur (Beispiel)
+
+**Tabelle `passwords`:**
+
+| id | user_id | title  | password (gehasht) |
+|----|---------|--------|--------------------|
+| 1  | 1       | Google | $2b$10$...         |
+
+## 🔍 Nächste Schritte
+
+- [ ] Passwortverschlüsselung statt Hash (z. B. AES)
+- [ ] Passwort-Liste im Frontend anzeigen
+- [ ] Logout-Funktion & Token-Handling verbessern
+- [ ] ErrorBoundary für robustere Fehlerbehandlung
+
+---

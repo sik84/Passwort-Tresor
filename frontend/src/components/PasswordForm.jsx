@@ -1,4 +1,3 @@
-// src/components/PasswordForm.jsx
 import React, { useState } from 'react';
 
 function PasswordForm({ token }) {
@@ -8,13 +7,16 @@ function PasswordForm({ token }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    console.log('🔐 Token in PasswordForm:', token);  // Token loggen
+    console.log('Authorization Header:', `Bearer ${token}`); // Header loggen
 
     try {
       const response = await fetch('http://localhost:4000/passwords', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,  // Token im Header senden
         },
         body: JSON.stringify({ title, password }),
       });

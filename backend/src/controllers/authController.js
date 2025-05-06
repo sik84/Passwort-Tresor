@@ -55,7 +55,7 @@ export async function loginUser(request, reply) {
     // JWT Token generieren
     const token = jwt.sign(
       { userId: user.id, username: user.username },
-      process.env.JWT_SECRET || 'your_jwt_secret',
+      process.env.JWT_SECRET || 'my_super_secret_key_4567',
       { expiresIn: '1h' }
     );
 

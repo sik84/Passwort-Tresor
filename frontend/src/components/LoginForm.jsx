@@ -24,7 +24,7 @@ export default function LoginForm({ onLogin }) {
 
       if (response.ok) {
         localStorage.setItem('token', data.token);
-        onLogin();
+        onLogin(data.token);
       } else {
         setError(data.message || 'Login failed');
       }
