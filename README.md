@@ -1,6 +1,6 @@
 # Passwort-Tresor
 Projekt zum sicheren Speichern von Passwörtern
-# 🔐 Passwort-Tresor (Abschlussprojekt)
+# 🔐 Passwort-Tresor (Abschlussprojekt) von Stefan Sikiric
 
 ## 📌 Projektbeschreibung
 Ein Container-basiertes Web-Projekt zur sicheren Verwaltung von Zugangsdaten, bestehend aus:
@@ -60,29 +60,37 @@ asswörtern für Teams mittels Docker-Container und Azure-Deployment.
 
 ## 🚦 Projektfortschritt (Tageslog / Scrum-Daily)
 
-28.04.2025:
+# Tagesbericht
+**Datum:** 28.04.2025:
+**Team:** Team Rot
 
-1. Frontend:
+---
+
+## 1. Frontend:
 
 Struktur für das Frontend eingerichtet.
 React-Anwendung initialisiert.
 .gitignore für das Frontend konfiguriert.
 Dockerfile für das Frontend erstellt.
 
-2. Projekt-Setup:
+## 2. Projekt-Setup:
 
 Git-Repository für das Projekt erstellt und die grundlegende Ordnerstruktur aufgesetzt.
 Erste Commit- und Push-Aktionen durchgeführt, um die Basis des Projekts zu speichern.
 
-29.04.2025:
+# Tagesbericht
+**Datum:** 29.04.2025:
+**Team:** Team Rot
 
-Backend:
+---
+
+## Backend:
 
 Struktur für das Backend eingerichtet.
 index.js, db.js und routes/index.js im Backend konfiguriert.
 Dockerfile für das Backend erstellt.
 
-Docker:
+## Docker:
 
 Docker Compose-Datei erstellt, um die Backend- und Frontend-Container zu verwalten.
 Dockerfiles für Backend und Frontend angelegt.
