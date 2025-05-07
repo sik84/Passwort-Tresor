@@ -186,3 +186,6 @@ Tabelle users wird zwar erstellt, dennoch gibt es Fehler beim Benutzerlogin
 - [ ] Passwortverschlüsselung statt Hash (z. B. AES)
 - [ ] Passwort-Liste im Frontend anzeigen
 - [ ] Logout-Funktion & Token-Handling verbesser
+- [ ] ErrorBoundary für robustere Fehlerbehandlung
+
+---
