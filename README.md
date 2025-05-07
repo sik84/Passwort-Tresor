@@ -58,6 +58,13 @@ Entwicklung eines internen Tools für Teams zur sicheren Passwortverwaltung auf 
 asswörtern für Teams mittels Docker-Container und Azure-Deployment.
 
 
+# Projekt-Dokumentation
+## Tagesberichte
+https://github.com/Kurs-24-06/Passwort-Tresor/blob/main/Tagesbericht.md
+## Datenbank (als Beispiel)
+
+
+
 ## 🚦 Projektfortschritt (Tageslog / Scrum-Daily)
 
 # Tagesbericht
