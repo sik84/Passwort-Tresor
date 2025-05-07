@@ -35,27 +35,31 @@ export default function LoginForm({ onLogin }) {
 
   return (
     <form onSubmit={handleLogin}>
-      <h2>Login</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <div>
-        <label>Username:</label>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </div>
-      <button type="submit">Login</button>
-    </form>
+  <h2>Login</h2>
+  {error && <p style={{ color: 'red' }}>{error}</p>}
+  <div>
+    <label>
+      Username<span style={{ color: 'red' }}> *</span>:
+    </label>
+    <input
+      type="text"
+      value={username}
+      onChange={(e) => setUsername(e.target.value)}
+      required
+    />
+  </div>
+  <div>
+    <label>
+      Password<span style={{ color: 'red' }}> *</span>:
+    </label>
+    <input
+      type="password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      required
+    />
+  </div>
+  <button type="submit">Login</button>
+</form>
   );
 }

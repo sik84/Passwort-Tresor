@@ -15,16 +15,27 @@ function App() {
     setIsLoggedIn(true);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setToken('');
+    setIsLoggedIn(false);
+  };  
+
   return (
     <div className="App">
       <h1>Passwort-Tresor</h1>
+  
       {!isLoggedIn ? (
         <LoginForm onLogin={handleLogin} />
       ) : (
-        <PasswordForm token={token} />
+        <>
+          <button onClick={handleLogout} style={{ marginBottom: '1rem' }}>
+            🔓 Logout
+          </button>
+          <PasswordForm token={token} />
+        </>
       )}
     </div>
   );
 }
-
 export default App;
