@@ -21,11 +21,11 @@ Dockerfile für das Frontend erstellt.
 Git-Repository für das Projekt erstellt und die grundlegende Ordnerstruktur aufgesetzt.
 Erste Commit- und Push-Aktionen durchgeführt, um die Basis des Projekts zu speichern.
 
-# Tagesbericht
-**Datum:** 29.04.2025:
-**Team:** Team Rot
-
 ---
+
+# Tagesbericht
+**Datum:** 29.04.2025
+**Team:** Team Rot
 
 ## Backend:
 
@@ -39,13 +39,19 @@ Docker Compose-Datei erstellt, um die Backend- und Frontend-Container zu verwalt
 Dockerfiles für Backend und Frontend angelegt.
 Verbindungen zwischen den Containern konfiguriert.
 
-30.04.2025: 
+---
+
+# Tagesbericht
+**Datum:** 30.04.2025
+**Team:** Team Rot 
 
 Backend-Grundstruktur fertig erstellt, Dockerfile für Back- und Frontend erstellt sowie Einrichtung der docker-compose.yml mit PostgreSQL
 
 ---
 
-01.05.2025:
+# Tagesbericht
+**Datum:** 01.05.2025
+**Team:** Team Rot
 
 #### ✅ Backend
 
@@ -80,7 +86,9 @@ Backend-Grundstruktur fertig erstellt, Dockerfile für Back- und Frontend erstel
 
 ---
 
-02.05.2025:
+# Tagesbericht
+**Datum:** 02.05.2025
+**Team:** Team Rot
 
 1. API-Endpunkte für Passwörter
 GET /passwords: Gibt eine Liste aller gespeicherten Passwörter zurück.
@@ -102,7 +110,9 @@ POST /login: Ermöglicht es einem Benutzer, sich anzumelden und ein JWT zu erhal
 
 ---
 
-📅 Fortschritt – 05.05.2025
+# Tagesbericht
+**Datum:** 05.05.2025
+**Team:** Team Rot
 
 ## Backend (Fastify + PostgreSQL)
 
@@ -151,7 +161,9 @@ Tabelle users wird zwar erstellt, dennoch gibt es Fehler beim Benutzerlogin
 
 ---
 
-06.05.2025:
+# Tagesbericht
+**Datum:** 06.05.2025
+**Team:** Team Rot
 
 ## ✅ Implementierte Funktionen (Stand: [heutiges Datum])
 
@@ -189,3 +201,7 @@ Tabelle users wird zwar erstellt, dennoch gibt es Fehler beim Benutzerlogin
 - [ ] ErrorBoundary für robustere Fehlerbehandlung
 
 ---
+
+# Tagesbericht
+**Datum:** 07.05.2025
+**Team:** Team Rot
