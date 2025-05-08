@@ -205,3 +205,5 @@ Tabelle users wird zwar erstellt, dennoch gibt es Fehler beim Benutzerlogin
 # Tagesbericht
 **Datum:** 07.05.2025
 **Team:** Team Rot
+
+Admin-Login eingeführt, dabei Nutzernamen in Admin geändert. Hierfür wurde ein neuer Branch erstellt, nämlich admin-loing.
