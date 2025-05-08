@@ -213,3 +213,4 @@ Logout-Funktion eingefügt in LoginForm.jsx. Rote Sternchen für Pflichtfelder e
 # Tagesbericht
 **Datum:** 08.05.2025
 **Team:** Team Rot
+
