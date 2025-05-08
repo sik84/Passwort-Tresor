@@ -197,11 +197,19 @@ Tabelle users wird zwar erstellt, dennoch gibt es Fehler beim Benutzerlogin
 
 - [ ] Passwortverschlüsselung statt Hash (z. B. AES)
 - [ ] Passwort-Liste im Frontend anzeigen
-- [ ] Logout-Funktion & Token-Handling verbesser
+- [ ] Logout-Funktion & Token-Handling verbessern
 - [ ] ErrorBoundary für robustere Fehlerbehandlung
 
 ---
 
 # Tagesbericht
 **Datum:** 07.05.2025
+**Team:** Team Rot
+
+Logout-Funktion eingefügt in LoginForm.jsx. Rote Sternchen für Pflichtfelder ebenfalls eingefügt.
+
+---
+
+# Tagesbericht
+**Datum:** 08.05.2025
 **Team:** Team Rot

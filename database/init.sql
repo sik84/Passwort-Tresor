@@ -15,6 +15,6 @@ CREATE TABLE IF NOT EXISTS passwords (
 
 -- Optional: Beispielnutzer einfügen (zum Testen)
 INSERT INTO users (username, password_hash)
-VALUES ('testuser', '$2b$10$PUeAyTTjq13XY6Pi5U0jmepR4HEK4fHa2eeqCC1eGSZh5Z3Q6TPky')
+VALUES ('admin', '$2b$10$PUeAyTTjq13XY6Pi5U0jmepR4HEK4fHa2eeqCC1eGSZh5Z3Q6TPky')
 ON CONFLICT (username) DO UPDATE
 SET password_hash = EXCLUDED.password_hash;

@@ -40,14 +40,14 @@ function PasswordForm({ token }) {
       <h2>🔐 Passwort speichern</h2>
       <input
         type="text"
-        placeholder="Titel (z. B. Google)"
+        placeholder="Titel* (z. B. Google)"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
       />
       <input
         type="text"
-        placeholder="Passwort"
+        placeholder="Passwort*"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
@@ -55,7 +55,7 @@ function PasswordForm({ token }) {
       <button type="submit">Speichern</button>
       {message && <p>{message}</p>}
     </form>
-  );
+  );  
 }
 
 export default PasswordForm;
