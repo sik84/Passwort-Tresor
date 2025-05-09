@@ -214,3 +214,10 @@ Logout-Funktion eingefügt in LoginForm.jsx. Rote Sternchen für Pflichtfelder e
 **Datum:** 08.05.2025
 **Team:** Team Rot
 
+---
+
+# Tagesbericht
+**Datum:** 09.05.2025
+**Team:** Team Rot
+
+Weiter auf Branch admin-login gearbeitet. Funktion der Passwortanzeige eingebaut. Diese werden nur gehasht angezeigt. 
