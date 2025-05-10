@@ -207,3 +207,12 @@ Tabelle users wird zwar erstellt, dennoch gibt es Fehler beim Benutzerlogin
 **Team:** Team Rot
 
 Admin-Login eingeführt, dabei Nutzernamen in Admin geändert. Hierfür wurde ein neuer Branch erstellt, nämlich admin-loing.
+
+---
+
+# Tagesbericht
+**Datum:** 10.05.2025
+**Team:** Team Rot
+
+Projekt via docker-compose erfolgreich deployt. Skript für admin-Login /backend/scripts/createAdmin.js musste im Backend erstellt werden, 
+damit man sich auf Container einloggen konnte.
