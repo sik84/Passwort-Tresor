@@ -221,3 +221,12 @@ Logout-Funktion eingefügt in LoginForm.jsx. Rote Sternchen für Pflichtfelder e
 **Team:** Team Rot
 
 Weiter auf Branch admin-login gearbeitet. Funktion der Passwortanzeige eingebaut. Diese werden nur gehasht angezeigt. 
+
+---
+
+# Tagesbericht
+**Datum:** 10.05.2025
+**Team:** Team Rot
+
+Projekt via docker-compose erfolgreich deployt. Skript für admin-Login /backend/scripts/createAdmin.js musste im Backend erstellt werden, 
+damit man sich auf Container einloggen konnte.
