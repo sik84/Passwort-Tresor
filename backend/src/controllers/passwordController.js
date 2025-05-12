@@ -5,13 +5,14 @@ export async function getAllPasswords(request, reply) {
   try {
     const data = await getPasswords();
 
-    // Alle Passwörter entschlüsseln
-    const decrypted = data.map(entry => ({
-      ...entry,
-      password: decrypt(entry.password_hash), // password_hash entschlüsseln
+    // NICHT entschlüsseln – nur raw zurückgeben
+    const hashedOnly = data.map(entry => ({
+      title: entry.title,
+      password_hash: entry.password_hash,
+      created_at: entry.created_at,
     }));
 
-    reply.send(decrypted);
+    reply.send(hashedOnly);
   } catch (err) {
     reply.status(500).send({ error: err.message });
   }

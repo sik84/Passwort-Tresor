@@ -197,7 +197,7 @@ Tabelle users wird zwar erstellt, dennoch gibt es Fehler beim Benutzerlogin
 
 - [ ] Passwortverschlüsselung statt Hash (z. B. AES)
 - [ ] Passwort-Liste im Frontend anzeigen
-- [ ] Logout-Funktion & Token-Handling verbesser
+- [ ] Logout-Funktion & Token-Handling verbessern
 - [ ] ErrorBoundary für robustere Fehlerbehandlung
 
 ---
@@ -206,7 +206,25 @@ Tabelle users wird zwar erstellt, dennoch gibt es Fehler beim Benutzerlogin
 **Datum:** 07.05.2025
 **Team:** Team Rot
 
+admin-login
+Logout-Funktion eingefügt in LoginForm.jsx. Rote Sternchen für Pflichtfelder ebenfalls eingefügt.
+
+---
+
+# Tagesbericht
+**Datum:** 08.05.2025
+**Team:** Team Rot
+
+---
+
+# Tagesbericht
+**Datum:** 09.05.2025
+**Team:** Team Rot
+
+Weiter auf Branch admin-login gearbeitet. Funktion der Passwortanzeige eingebaut. Diese werden nur gehasht angezeigt. 
+
 Admin-Login eingeführt, dabei Nutzernamen in Admin geändert. Hierfür wurde ein neuer Branch erstellt, nämlich admin-loing.
+
 
 ---
 
