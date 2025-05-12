@@ -234,3 +234,11 @@ Admin-Login eingeführt, dabei Nutzernamen in Admin geändert. Hierfür wurde ei
 
 Projekt via docker-compose erfolgreich deployt. Skript für admin-Login /backend/scripts/createAdmin.js musste im Backend erstellt werden, 
 damit man sich auf Container einloggen konnte.
+
+---
+
+# Tagesbericht
+**Datum:** 12.05.2025
+**Team:** Team Rot
+
+Heute wurde das lokale Projekt vollständig auf HTTPS umgestellt. Sowohl Backend als auch Frontend kommunizieren nun verschlüsselt – inklusive selbstsignierter Zertifikate für realistische Tests.
