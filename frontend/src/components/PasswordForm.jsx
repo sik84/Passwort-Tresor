@@ -83,7 +83,14 @@ function PasswordForm({ token }) {
   
       <div style={{ marginTop: '2rem' }}>
         {!showPasswords ? (
-          <button onClick={loadPasswords}>Gespeicherte Passwörter anzeigen</button>
+          <button onClick={() => {
+    const confirmed = window.confirm("Hast du die Schablone auf dem Monitor?");
+    if (confirmed) {
+      loadPasswords();
+    }
+  }}
+>
+  Gespeicherte Passwörter anzeigen</button>
         ) : (
           <button onClick={() => setShowPasswords(false)}>Passwörter ausblenden</button>
         )}

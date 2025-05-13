@@ -242,3 +242,12 @@ damit man sich auf Container einloggen konnte.
 **Team:** Team Rot
 
 Heute wurde das lokale Projekt vollständig auf HTTPS umgestellt. Sowohl Backend als auch Frontend kommunizieren nun verschlüsselt – inklusive selbstsignierter Zertifikate für realistische Tests.
+
+---
+
+# Tagesbericht
+**Datum:** 13.05.2025
+**Team:** Team Rot
+
+Popupfenster für Sicherheitsabfrage erstellt: "Hast Du die Schablone auf dem Monitor?" 
+Dieses Fenster erscheint, bevor die Passwörter entschlüsselt werden.
