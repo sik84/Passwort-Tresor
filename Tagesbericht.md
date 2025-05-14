@@ -251,3 +251,12 @@ Heute wurde das lokale Projekt vollständig auf HTTPS umgestellt. Sowohl Backend
 
 Popupfenster für Sicherheitsabfrage erstellt: "Hast Du die Schablone auf dem Monitor?" 
 Dieses Fenster erscheint, bevor die Passwörter entschlüsselt werden.
+
+---
+
+# Tagesbericht
+**Datum:** 14.05.2025
+**Team:** Team Rot
+
+Die grundlegende Struktur für die Passwortentschlüsselung wurde sowohl im Backend als auch im Frontend implementiert. 
+Der Admin kann nun Passwörter verschlüsselt speichern und auf Wunsch entschlüsseln lassen.
