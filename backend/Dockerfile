@@ -11,6 +11,8 @@ RUN npm install
 # Restliche Dateien kopieren
 COPY . .
 
+# COPY ./certs ./certs
+
 # Exponierter Port (z. B. 4000 für Fastify)
 EXPOSE 4000
 

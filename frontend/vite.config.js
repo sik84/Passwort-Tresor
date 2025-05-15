@@ -6,16 +6,16 @@ export default defineConfig({
   plugins: [react()],
   server: {
     https: {
-      key: fs.readFileSync('./certs/key.pem'), // Pfad zum privaten Schlüssel
-      cert: fs.readFileSync('./certs/cert.pem'), // Pfad zum Zertifikat
+      key: fs.readFileSync('./certs/key.pem'),
+      cert: fs.readFileSync('./certs/cert.pem'),
     },
-    host: 'localhost',
+    host: true, // ← erlaubt externen Zugriff (auch von nginx)
     port: 5173,
     proxy: {
       '/api': {
-        target: 'https://localhost:4000',  // Backend-URL mit https
+        target: 'https://localhost:4000',
         changeOrigin: true,
-        secure: false,  // Setze dies auf false, wenn du selbstsignierte Zertifikate verwendest
+        secure: false,
       },
     },
   },

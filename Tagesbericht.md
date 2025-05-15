@@ -260,3 +260,11 @@ Dieses Fenster erscheint, bevor die Passwörter entschlüsselt werden.
 
 Die grundlegende Struktur für die Passwortentschlüsselung wurde sowohl im Backend als auch im Frontend implementiert. 
 Der Admin kann nun Passwörter verschlüsselt speichern und auf Wunsch entschlüsseln lassen.
+
+---
+
+# Tagesbericht
+**Datum:** 15.05.2025
+**Team:** Team Rot
+
+Heute wurde das Deployment für den Passwort-Tresor vorbereitet: Docker-Compose wurde erweitert um Nginx als Reverse Proxy, HTTPS mit selbstsignierten Zertifikaten eingerichtet und die Container für Frontend, Backend und Datenbank konfiguriert.

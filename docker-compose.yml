@@ -42,6 +42,20 @@ services:
     networks:
       - app-network
 
+  nginx:  # 👈 jetzt korrekt eingerückt unter services
+    build:
+      context: ./nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/certs:/etc/nginx/certs
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - app-network
+
 networks:
   app-network:
 
