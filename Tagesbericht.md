@@ -268,3 +268,12 @@ Der Admin kann nun Passwörter verschlüsselt speichern und auf Wunsch entschlü
 **Team:** Team Rot
 
 Heute wurde das Deployment für den Passwort-Tresor vorbereitet: Docker-Compose wurde erweitert um Nginx als Reverse Proxy, HTTPS mit selbstsignierten Zertifikaten eingerichtet und die Container für Frontend, Backend und Datenbank konfiguriert.
+
+---
+
+# Tagesbericht
+**Datum:** 16.05.2025
+**Team:** Team Rot
+
+Deployment-Versuch auf Azure-VM. Anwendung konnte nicht geladen werden, da 500er Server-Fehler.
+Fehler konnte noch nicht behoben werden.
