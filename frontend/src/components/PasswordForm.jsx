@@ -15,13 +15,13 @@ function PasswordForm({ token }) {
   }
 
   try {
-    const response = await fetch('https://localhost:4000/decrypt', {
+    const response = await fetch('https://localhost:4000/passwords/decrypt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ encrypted: hash }),
+      body: JSON.stringify({ encryptedPassword: hash }),
     });
 
     const data = await response.json();

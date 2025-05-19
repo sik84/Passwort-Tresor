@@ -33,3 +33,19 @@ export async function createPassword(request, reply) {
     reply.status(500).send({ error: err.message });
   }
 }
+
+export async function decryptPassword(request, reply) {
+  try {
+    const { encryptedPassword } = request.body;
+
+    if (!encryptedPassword) {
+      return reply.status(400).send({ error: 'Encrypted password is missing' });
+    }
+
+    const decrypted = decrypt(encryptedPassword);
+
+    reply.send({ decryptedPassword: decrypted });
+  } catch (err) {
+    reply.status(500).send({ error: 'Failed to decrypt password', details: err.message });
+  }
+}

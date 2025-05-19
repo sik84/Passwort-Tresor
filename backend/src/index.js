@@ -1,24 +1,20 @@
-// 1. dotenv ganz oben einfügen
 import dotenv from 'dotenv';
-dotenv.config(); // Lädt die Variablen aus der .env-Datei
-// 2. Der Import von Fastify und weiteren Modulen bleibt unverändert
+dotenv.config();
+
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
+import fastifyFormbody from '@fastify/formbody';
 import authRoutes from './routes/auth.js';
 import passwordRoutes from './routes/password.js';
-import '../config/db.js'; // Verbindung initialisieren
-import verifyToken from './middleware/verifyToken.js';  // Middleware importieren
+import '../config/db.js';
+import verifyToken from './middleware/verifyToken.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// 3. Der Zugriff auf die Umgebungsvariable für JWT_SECRET
-const jwtSecret = process.env.JWT_SECRET || 'fallback_secret'; // Falls die .env-Variable fehlt, Fallback verwenden
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// 4. Fastify Server Setup
 const app = Fastify({
   logger: true,
   https: {
@@ -27,26 +23,33 @@ const app = Fastify({
   },
 });
 
-app.register(cors, {
-  origin: true, // oder spezifische URL wie 'https://localhost:5173'
-  methods: ['POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true, // Das ermöglicht das Setzen von Cookies und Headern wie Authorization
-});
+const start = async () => {
+  try {
+    await app.register(fastifyFormbody); // JSON / Form-Parsing aktivieren
 
-app.register(authRoutes);
-app.register(passwordRoutes, {
-  preHandler: verifyToken  // Middleware auf alle Routes in passwordRoutes anwenden
-});
+    await app.register(cors, {
+      origin: true, // oder spezifisch: 'https://localhost:5173'
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
+      credentials: true,
+      preflightContinue: true,
+    });
 
-app.listen({ port: 4000, host: '0.0.0.0' }, (err, address) => {
-  if (err) {
+    await app.register(authRoutes);
+    await app.register(passwordRoutes, {
+      preHandler: verifyToken,
+    });
+
+    app.get('/', async (request, reply) => {
+      return { status: 'API läuft 🎉' };
+    });
+
+    await app.listen({ port: 4000, host: '0.0.0.0' });
+    app.log.info(`🚀 Server läuft unter https://localhost:4000`);
+  } catch (err) {
     app.log.error(err);
     process.exit(1);
   }
-  app.log.info(`🚀 Server läuft unter ${address}`);
-});
+};
 
-app.get('/', async (request, reply) => {
-  return { status: 'API läuft 🎉' };
-});
+start();
