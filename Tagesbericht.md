@@ -277,3 +277,12 @@ Heute wurde das Deployment für den Passwort-Tresor vorbereitet: Docker-Compose 
 
 Deployment-Versuch auf Azure-VM. Anwendung konnte nicht geladen werden, da 500er Server-Fehler.
 Fehler konnte noch nicht behoben werden.
+
+---
+
+# Tagesbericht
+**Datum:** 19.05.2025
+**Team:** Team Rot
+
+Feature der Entschlüsselung von Passwörtern getestet. Bugs mit dem request-body. Dieser ist nicht definiert.
+Morgen wieder Deployment auf Azure.
