@@ -26,7 +26,7 @@ function PasswordForm({ token }) {
 
     const data = await response.json();
     if (response.ok) {
-      setVisiblePasswords(prev => ({ ...prev, [id]: data.password }));
+      setVisiblePasswords(prev => ({ ...prev, [id]: data.decryptedPassword }));
     } else {
       console.error('Entschlüsselung fehlgeschlagen:', data.message);
     }
