@@ -286,3 +286,16 @@ Fehler konnte noch nicht behoben werden.
 
 Feature der Entschlüsselung von Passwörtern getestet. Bugs mit dem request-body. Dieser ist nicht definiert.
 Morgen wieder Deployment auf Azure.
+
+---
+
+# Tagesbericht
+**Datum:** 20.05.2025
+**Team:** Team Rot
+
+feat: Entschlüsselungsfunktion für Passwörter per Button im Branch "entschluesselung-feature" hinzugefügt.
+
+- Backend-Route /passwords/decrypt integriert
+- Entschlüsselungslogik in passwordController angebunden
+- Frontend-Button „Anzeigen“ ruft Entschlüsselung ab
+- UI zeigt entschlüsseltes Passwort bei Klick
