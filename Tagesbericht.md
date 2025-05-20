@@ -299,3 +299,13 @@ feat: Entschlüsselungsfunktion für Passwörter per Button im Branch "entschlue
 - Entschlüsselungslogik in passwordController angebunden
 - Frontend-Button „Anzeigen“ ruft Entschlüsselung ab
 - UI zeigt entschlüsseltes Passwort bei Klick
+- Branch entschluesselung-feature gelöscht
+
+Fix: Nginx Proxy auf HTTPS Backend umgestellt und HTTPS-Konfiguration verbessert
+
+- Proxy-Pass von http://backend:4000 auf https://backend:4000 geändert, um Verbindungsfehler zu vermeiden
+- Nginx SSL-Settings verfeinert
+- Vite-Config mit HTTPS aktiviert
+- Fehlerquelle ERR_CONNECTION_REFUSED bei API-Requests behoben
+
+Wichtig!! Änderungen auf der VM umgesetzt. Lokale Testung folgt noch!
