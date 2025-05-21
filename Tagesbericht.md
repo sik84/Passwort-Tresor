@@ -318,3 +318,17 @@ Wichtig!! Änderungen auf der VM umgesetzt. Lokale Testung folgt noch!
 
 Frontend-Build hinzugefügt, Nginx-Konfiguration angepasst - Änderungen in den Main-Branch übernommen.
 Frontend wird aufgerufen, aber nach wie vor Server-Fehler. Bugfixing morgen.
+
+Folgende Dateien wurden geändert:
+
+docker-compose.yml                       |   3 +-
+ frontend/Dockerfile                      |  18 +-
+ frontend/nginx/default.conf              |  31 ++
+ frontend/package-lock.json               | 657 ++++++++++++++-------------
+ frontend/src/components/LoginForm.jsx    |   2 +-
+ frontend/src/components/PasswordForm.jsx |   6 +-
+ frontend/vite.config.js                  |  10 +-
+ nginx/Dockerfile                         |  18 +-
+ nginx/default.conf                       |  14 +-
+ 9 files changed, 406 insertions(+), 353 deletions(-)
+ create mode 100644 frontend/nginx/default.conf
