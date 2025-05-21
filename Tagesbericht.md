@@ -309,3 +309,12 @@ Fix: Nginx Proxy auf HTTPS Backend umgestellt und HTTPS-Konfiguration verbessert
 - Fehlerquelle ERR_CONNECTION_REFUSED bei API-Requests behoben
 
 Wichtig!! Änderungen auf der VM umgesetzt. Lokale Testung folgt noch!
+
+---
+
+# Tagesbericht
+**Datum:** 21.05.2025
+**Team:** Team Rot
+
+Frontend-Build hinzugefügt, Nginx-Konfiguration angepasst - Änderungen in den Main-Branch übernommen.
+Frontend wird aufgerufen, aber nach wie vor Server-Fehler. Bugfixing morgen.
