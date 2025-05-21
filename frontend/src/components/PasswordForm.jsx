@@ -15,7 +15,7 @@ function PasswordForm({ token }) {
   }
 
   try {
-    const response = await fetch('https://localhost:4000/passwords/decrypt', {
+    const response = await fetch('api/passwords/decrypt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ function PasswordForm({ token }) {
   // 👇 Nur bei Klick aufrufen
   const loadPasswords = async () => {
     try {
-      const response = await fetch('https://localhost:4000/passwords', {
+      const response = await fetch('api/passwords', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -60,7 +60,7 @@ function PasswordForm({ token }) {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://localhost:4000/passwords', {
+      const response = await fetch('api/passwords', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
