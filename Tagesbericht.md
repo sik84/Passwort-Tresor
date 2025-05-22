@@ -332,3 +332,15 @@ docker-compose.yml                       |   3 +-
  nginx/default.conf                       |  14 +-
  9 files changed, 406 insertions(+), 353 deletions(-)
  create mode 100644 frontend/nginx/default.conf
+
+---
+
+# Tagesbericht
+**Datum:** 22.05.2025
+**Team:** Team Rot
+
+Heute wurde das vollständige Fullstack-Projekt erfolgreich auf einer Azure-VM deployed. 
+Dabei wurde das Frontend mit Vite gebuildet und über NGINX produktiv ausgeliefert. 
+Der Backend-Server läuft über HTTPS mit JWT-basiertem Login, 
+kommuniziert mit einer PostgreSQL-Datenbank und wird ebenfalls über NGINX als Reverse-Proxy abgesichert. 
+Alle Container sind orchestriert mit Docker Compose. Funktionstest (z. B. Login) verlief erfolgreich.
