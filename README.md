@@ -55,7 +55,7 @@ Entwicklung eines internen Tools für Teams zur sicheren Passwortverwaltung auf 
 - [Azure VM Einrichtung](#)
 - [Datenbankschema](#)
 - [Docker Compose Setup](#)
-asswörtern für Teams mittels Docker-Container und Azure-Deployment.
+Passwörtern für Teams mittels Docker-Container und Azure-Deployment.
 
 
 # Projekt-Dokumentation
