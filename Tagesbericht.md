@@ -344,3 +344,11 @@ Dabei wurde das Frontend mit Vite gebuildet und über NGINX produktiv ausgeliefe
 Der Backend-Server läuft über HTTPS mit JWT-basiertem Login, 
 kommuniziert mit einer PostgreSQL-Datenbank und wird ebenfalls über NGINX als Reverse-Proxy abgesichert. 
 Alle Container sind orchestriert mit Docker Compose. Funktionstest (z. B. Login) verlief erfolgreich.
+
+---
+
+# Tagesbericht
+**Datum:** 23.05.2025
+**Team:** Team Rot
+
+Frontend optisch verbessert.
