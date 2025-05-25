@@ -352,3 +352,12 @@ Alle Container sind orchestriert mit Docker Compose. Funktionstest (z. B. Logi
 **Team:** Team Rot
 
 Frontend optisch verbessert.
+
+---
+
+# Tagesbericht
+**Datum:** 2.05.2025
+**Team:** Team Rot
+
+Dokumentation wurde fortgeführt und ausführlicher beschrieben.
+README-Dateien für Front-, Backend, Datenbank und nginx erstellt und dokumentiert.

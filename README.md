@@ -5,7 +5,7 @@ Projekt zum sicheren Speichern von Passwörtern
 ## 📌 Projektbeschreibung
 Ein Container-basiertes Web-Projekt zur sicheren Verwaltung von Zugangsdaten, bestehend aus:
 - Frontend (React)
-- Backend (API mit Login + Verschlüsselung)
+- Backend (API mit Login + Verschlüsselung + Entschlüsselung)
 - PostgreSQL-Datenbank
 - Hosting auf Azure-VM mit Fokus auf Sicherheit (SSH, TLS, Container-Hardening)
 
@@ -24,9 +24,9 @@ Entwicklung eines internen Tools für Teams zur sicheren Passwortverwaltung auf 
 | Backend        | Node.js + Express *(oder Python FastAPI)* |
 | Datenbank      | PostgreSQL         |
 | Container      | Docker / Docker Compose |
-| Cloud          | Azure (VM oder ACI) |
-| Sicherheit     | JWT / AES / TLS / Benutzerrollen |
-| Verwaltung     | GitHub, SCRUM-Tagebuch in README |
+| Cloud          | Azure (VM) |
+| Sicherheit     | JWT / AES / TLS |
+| Verwaltung     | GitHub, Tagesbericht in README sowie Product-Backlog in GitHub Projects|
 
 ---
 
@@ -62,3 +62,21 @@ Passwörtern für Teams mittels Docker-Container und Azure-Deployment.
 ## Tagesberichte
 [Projektbericht](https://github.com/Kurs-24-06/Passwort-Tresor/blob/main/Tagesbericht.md)
 ## Datenbank (als Beispiel)
+
+## Frontend
+## Backend
+
+```markdown
+## 📚 Dokumentation
+
+- [Frontend-Dokumentation](./frontend/README.md)
+- [Backend-Dokumentation](./backend/README.md)
+
+---
+
+## nginx
+
+- [nginx-Dokumentation](./nginx/README.md)
+
+📄 Lizenz
+Dieses Projekt steht unter der MIT-Lizenz.
