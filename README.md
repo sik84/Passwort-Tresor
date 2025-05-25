@@ -18,15 +18,41 @@ Entwicklung eines internen Tools für Teams zur sicheren Passwortverwaltung auf 
 
 ## 🛠️ Tech Stack
 
-| Komponente     | Technologie        |
-|----------------|--------------------|
-| Frontend       | React              |
-| Backend        | Node.js + Express *(oder Python FastAPI)* |
-| Datenbank      | PostgreSQL         |
-| Container      | Docker / Docker Compose |
-| Cloud          | Azure (VM) |
-| Sicherheit     | JWT / AES / TLS |
-| Verwaltung     | GitHub, Tagesbericht in README sowie Product-Backlog in GitHub Projects|
+🌐 Frontend
+
+- React – UI-Bibliothek für komponentenbasiertes Webinterface
+
+- Vite – moderner Entwicklungs- und Build-Toolchain (schneller als CRA)
+
+- JavaScript (ES6+) – moderne Sprachfeatures für die Logik
+
+- CSS – responsive, leichtgewichtige Gestaltung der UI
+
+🔒 Backend
+
+- Fastify – performantes Node.js Webframework mit eingebauter Sicherheit
+
+- Node.js (ES Modules) – serverseitige JavaScript-Ausführung
+
+- JWT (jsonwebtoken) – sichere Token-basierte Authentifizierung
+
+- bcrypt – sichere Passwort-Hashing-Funktion
+
+- PostgreSQL – relationale Datenbank (ansteuerbar über pg)
+
+🌐 API & Sicherheit
+
+- HTTPS mit NGINX – verschlüsselte Kommunikation via SSL-Zertifikaten
+
+- NGINX Reverse Proxy – Routing von Anfragen an Frontend & Backend
+
+- CORS & Formbody Middleware – sicheres Handling von Anfragen und Daten
+
+🐳 Deployment
+
+- Docker & Docker Compose – Containerisierung des Front- und Backends
+
+- Azure Virtual Machine (Ubuntu) – gehostete Umgebung für das Deployment
 
 ---
 
@@ -60,8 +86,12 @@ Passwörtern für Teams mittels Docker-Container und Azure-Deployment.
 
 # Projekt-Dokumentation
 ## Tagesberichte
+
 [Projektbericht](https://github.com/Kurs-24-06/Passwort-Tresor/blob/main/Tagesbericht.md)
-## Datenbank (als Beispiel)
+
+## Datenbank
+
+- [Datenbank-Beschreibung](./database/README.md)
 
 ## Frontend
 ## Backend
