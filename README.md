@@ -65,24 +65,17 @@ Entwicklung eines internen Tools für Teams zur sicheren Passwortverwaltung auf 
 
 ---
 
-## 🔐 Sicherheitsmaßnahmen (geplant / umgesetzt)
+## 🔐 Umgesetzte Sicherheitsmaßnahmen
 
-- [x] Keine öffentlichen Ports ohne Authentifizierung
-- [x] Backend trennt Logik & Secrets
-- [ ] TLS-Zertifikate für Frontend-API
-- [ ] Container laufen ohne Root
-- [ ] Logging + Monitoring (z. B. Fail2Ban, Logs über Volume)
+- ✅ Keine öffentlichen Ports ohne Authentifizierung (alles über HTTPS + NGINX)
+- ✅ TLS-Zertifikate für API & Webserver (eigenes Zertifikat mit NGINX Reverse Proxy)
+- ✅ Backend trennt Logik und Secrets (dotenv, keine Hardcoded-Credentials)
+- ✅ Passwort-Hashing mit Bcrypt & AES-Verschlüsselung im Backend
+- ✅ Container ohne Root-Berechtigungen (USER-Direktive + Docker-Hardening)
+- ✅ Schutz durch SSH-Login via Public Key (Azure VM)
+- ✅ Logging über Fastify + vorbereitete Tests (künftig erweiterbar für Monitoring)
 
 ---
-
-## 📎 Links (Dokumentation / Ressourcen)
-
-- [React Projektstruktur](#)
-- [Azure VM Einrichtung](#)
-- [Datenbankschema](#)
-- [Docker Compose Setup](#)
-Passwörtern für Teams mittels Docker-Container und Azure-Deployment.
-
 
 # Projekt-Dokumentation
 ## Tagesberichte
