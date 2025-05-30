@@ -356,8 +356,19 @@ Frontend optisch verbessert.
 ---
 
 # Tagesbericht
-**Datum:** 2.05.2025
+**Datum:** 24.05.2025
 **Team:** Team Rot
 
 Dokumentation wurde fortgeführt und ausführlicher beschrieben.
 README-Dateien für Front-, Backend, Datenbank und nginx erstellt und dokumentiert.
+
+---
+
+# Tagesbericht
+**Datum:** 30.05.2025
+**Team:** Team Rot
+
+- Passwortmaskierung bei Passwort-Eingabe im Tresor
+- Frontend neu gebaut und Design nun mittig gelegt
+- Finales Deployment-Update auf Azure-VM
+- Dokumentation finalisiert
